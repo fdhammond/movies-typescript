@@ -7,7 +7,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-10 -mx-28">
         <Navbar />
       </header>
-      <main>{children}</main>
+      <main>
+        {children}
+      </main>
       <footer className="-mx-28 border-t border-solid border-gray-500 mt-24 opacity-30">
         <Footer />
       </footer>
