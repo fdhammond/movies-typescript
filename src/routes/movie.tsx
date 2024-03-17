@@ -14,7 +14,9 @@ export const movieRoute = new Route({
     path: 'movie/$id',
     component: () => {
         const data = movieRoute.useLoaderData();
-        return <Movie movie={data} />;
+        return (
+            <Movie movie={data} />
+        )
     },
     pendingComponent: () => <div>Loading...</div>,
     errorComponent: () => <div>Error loading movie...</div>,

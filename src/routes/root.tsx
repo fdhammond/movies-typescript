@@ -1,4 +1,4 @@
-import { Link, RootRoute, Outlet } from "@tanstack/react-router";
+import { RootRoute, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 
 
