@@ -28,14 +28,16 @@ const Movie = ({ movie }) => {
                         className="w-full h-full object-cover"
                     />
                 </div>
-                <div className="max-w-auto flex flex-col gap-6 justify-center align-center text-left md:text-gray-200 text-black pt-8 md:pl-20 md:mt-6">
-                    <p className="text-2xl font-bold">{releaseYear}</p>
-                    <h1 className="text-4xl md:text-7xl font-bold">{movie.title}</h1>
-                    <div className="md:min-h-32">
+                <div className="max-w-auto flex flex-col gap-6 justify-center align-center text-left md:text-gray-200 text-black md:pl-20">
+                    <p className="text-2xl md:text-4xl font-bold md:pt-0 pt-6">{releaseYear}</p>
+                    <div className="md:min-h-40 flex justify-start align-center items-center">
+                        <h1 className="text-4xl md:text-7xl font-bold">{movie.title}</h1>
+                    </div>
+                    <div className="md:min-h-24">
                         <p className="text-md max-w-xl">{movie.overview}</p>
                     </div>
                     <div className="flex justify-start align-center gap-4 items-center flex-wrap">
-                        <div className="flex gap-4 justify-start items-center md:w-auto w-full">
+                        <div className="flex gap-4 justify-start items-center md:w-auto w-full md:min-h-18">
                             <FaRegCirclePlay className="text-4xl hover:text-black cursor-pointer" onClick={() => setShowModal(true)} />
                             <p>Watch the trailer</p>
                         </div>
