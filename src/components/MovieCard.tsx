@@ -14,7 +14,7 @@ export default function MovieCard({
   movieId,
 }: MovieCard) {
   return (
-    <div className="w-[300px] h-[528px]">
+    <div className="md:w-[300px] h-[528px]">
       <Link to={`/movie/${movieId.toString()}`} params={{ movieId: movieId.toString() }}>
         <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt="" />
       </Link>

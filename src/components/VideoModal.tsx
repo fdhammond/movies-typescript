@@ -11,7 +11,7 @@ export default function VideoModal({ showModal, setShowModal }) {
 
     return (
         <>
-            <div className='bg-black bg-opacity-60 pt-[80%] md:pt-0 h-screen w-screen fixed md:top-0 left-0 md:pl-16'>
+            <div className='bg-black bg-opacity-60 pt-[80%] md:pt-0 h-screen w-screen fixed md:top-0 left-0 md:pl-16 z-50'>
                 <div className='flex justify-end text-white cursor-pointer md:pr-12' onClick={handleCloseModal}>
                     <IoMdClose className='text-4xl'/>
                 </div>

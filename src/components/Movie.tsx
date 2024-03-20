@@ -48,12 +48,12 @@ const Movie = ({ movie }) => {
                     </motion.div>
                 )}
             </AnimatePresence>
+            {showModal && <VideoModal showModal={showModal} setShowModal={setShowModal} />}
             <LayoutMovie>
                 <motion.div
                     initial={{ y: "25px" }}
                     animate={{ y: 0 }}
                     transition={{ duration: 1, delay: 2 }}
-                    style={{ pointerEvents: isLoading ? 'none' : 'auto' }} // Disable pointer events when loading
                 >
                     <div className="w-full min-h-screen flex-col md:flex-row flex justify-start align-middle items-start md:pl-48 pt-20">
                         <div className="max-w-[370px] h-[545px] relative">
