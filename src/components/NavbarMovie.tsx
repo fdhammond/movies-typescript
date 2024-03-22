@@ -42,7 +42,7 @@ export default function NavbarMovie() {
         stickyNav ? 'sticky top-0 bg-white left-0 right-0' : ''
       }`}
     >
-      <ul className={`flex w-full md:flex-row flex-col justify-center align-center self-center text-font-white-color ${stickyNav ? 'text-black' : ''}`}>
+      <ul className={`flex w-full md:flex-row flex-col justify-center align-center self-center text-white ${stickyNav ? 'text-black' : ''}`}>
         {stickyNav ? (
           <motion.li
             initial={{ opacity: 0, x: -20 }}
@@ -52,7 +52,7 @@ export default function NavbarMovie() {
               transition: { delay: stickyNav ? 1 : 0.3 },
             }}
           >
-            <a href="/" className="text-3xl font-bold ml-8">
+            <a href="/" className="text-3xl font-bold ml-8 text-black">
               Movies
             </a>
           </motion.li>
@@ -74,7 +74,7 @@ export default function NavbarMovie() {
                   x: 0,
                   transition: { delay: index * 0.1 + 1 },
                 }}
-                className="px-4"
+                className={`px-4 ${stickyNav ? 'text-black' : ''}`}
               >
                 <a href={item.url}>{item.name}</a>
               </motion.li>
