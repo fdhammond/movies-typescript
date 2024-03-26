@@ -11,7 +11,7 @@ const HeroImages = ({ movies }) => {
             modules={[Autoplay, Pagination]}
             slidesPerView={2}
             slidesPerGroup={2}
-            autoplay={{ delay: 9999, disableOnInteraction: false, pauseOnMouseEnter: true, }}
+            autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true, }}
             loop
             className='w-[1200px] h-auto'
         >
