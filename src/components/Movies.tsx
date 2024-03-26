@@ -6,9 +6,9 @@ const Movies = ({movies}) => {
 
     return (
         <>
-            {/* <div>
-                <HeroImages />
-            </div> */}
+            <div>
+                <HeroImages movies={movies} />
+            </div>
             <div className="w-full h-full grid md:grid-cols-5 md:gap-8 grid-cols-1 gap-4">
                 {
                     movies.map((movie: MovieProps) => (
