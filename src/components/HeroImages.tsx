@@ -24,6 +24,7 @@ const HeroImages = ({ movies }) => {
             }
         };
         window.addEventListener("resize", checkScreenSize);
+        window.addEventListener("load", checkScreenSize);
         return () => window.removeEventListener("resize", checkScreenSize);
     }, []);
 
