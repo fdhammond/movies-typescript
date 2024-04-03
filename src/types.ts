@@ -13,5 +13,7 @@ export interface MovieProps {
     video: boolean;
     vote_average: number;
     vote_count: number;
-    results: Movie[];
+    genres: { id: number; name: string }[];
+    production_companies: { id: number; name: string }[];
+    status: string
   }

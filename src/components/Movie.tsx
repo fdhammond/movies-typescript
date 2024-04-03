@@ -6,8 +6,9 @@ import getMovieGenre from "../helpers/getMovieGenre";
 import Stars from "./Stars";
 import { motion, AnimatePresence } from 'framer-motion';
 import CircleLoader from "./CircleLoader";
+import { MovieProps } from "../types";
 
-const Movie = ({ movie }) => {
+const Movie = ({ movie }: { movie: MovieProps }) => {
     const releaseYear = movie.release_date.split("-")[0];
     const [showModal, setShowModal] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
@@ -90,7 +91,7 @@ const Movie = ({ movie }) => {
                                 </div>
                                 <div className="md:mt-10 mt-4 md:border-r-[.1rem] md:border-solid md:border-gray-200 md:h-12 w-auto pr-8">
                                     <p className="text-sm text-gray-500 font-bold">Network</p>
-                                    <p className="text-sm text-black font-bold">{movie.production_companies[0].name}</p>
+                                    <p className="text-sm text-black font-bold">{movie.production_companies?.[0]?.name}</p>
                                 </div>
                                 <div className="md:mt-10 mt-4 md:border-r-[.1rem] md:border-solid md:border-gray-200 md:h-12 w-auto pr-8">
                                     <p className="text-sm text-gray-500 font-bold">Status</p>

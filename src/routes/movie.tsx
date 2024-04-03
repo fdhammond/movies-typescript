@@ -3,11 +3,9 @@ import { rootRoute } from './root'
 import Movie from '../components/Movie'
 import fetchMovieById from '../helpers/fetchMovieById';
 
-
-
 export const movieRoute = new Route({
     getParentRoute: () => rootRoute,
-    loader: async ({ params }) => {
+    loader: async ({ params }: { params: { id: number } }) => {
         const data = await fetchMovieById(params.id);
         return data
     },

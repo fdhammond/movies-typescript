@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { IoMdClose } from "react-icons/io";
 
-export default function VideoModal({ showModal, setShowModal }) {
-    const [videoSrc, setVideoSrc] = useState('https://www.youtube.com/embed/d2OONzqh2jk?si=RkCI5-de6uT6FTJk');
+export default function VideoModal({ showModal, setShowModal }: { showModal: boolean, setShowModal: React.Dispatch<React.SetStateAction<boolean>> }) {
+    const [videoSrc, setVideoSrc] = useState<string>('https://www.youtube.com/embed/d2OONzqh2jk?si=RkCI5-de6uT6FTJk');
 
     // Function to close the modal and stop the video playback
     const handleCloseModal = () => {

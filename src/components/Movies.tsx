@@ -2,8 +2,7 @@ import { MovieProps } from "../types";
 import HeroImages from "./HeroImages";
 import MovieCard from "./MovieCard";
 
-const Movies = ({movies}) => {
-
+const Movies = ({movies}: {movies: MovieProps[]}) => {
     return (
         <>
             <div>
@@ -16,7 +15,7 @@ const Movies = ({movies}) => {
                             key={movie.id}
                             title={movie.title}
                             poster_path={movie.poster_path}
-                            // genre_ids={handleGetMovieGenres(movie.genre_ids)}
+                            genre_ids={""}
                             movieId={movie.id}
                         />
                     ))

@@ -1,13 +1,14 @@
-import { motion } from "framer-motion"
+import React from "react";
+import { motion, Variant } from "framer-motion";
 
-const CircleLoader = () => {
-    const containerStyle = {
+const CircleLoader: React.FC = () => {
+    const containerStyle: React.CSSProperties = {
         position: "relative",
         width: "6rem",
         height: "6rem"
-    }
+    };
 
-    const circleStyle = {
+    const circleStyle: React.CSSProperties = {
         display: "block",
         width: "6rem",
         height: "6em",
@@ -19,20 +20,22 @@ const CircleLoader = () => {
         boxSizing: "border-box",
         top: 0,
         left: 0
-    }
+    };
 
-    const spinTransition = {
-        loop: Infinity,
-        ease: "linear",
-        duration: 1,
-        repeat: Infinity
-    }
+    const spinTransition: Variant = {
+        rotate: 360,
+        transition: {
+            loop: Infinity,
+            ease: "linear",
+            duration: 1
+        }
+    };
 
     return (
         <div style={containerStyle}>
-            <motion.span style={circleStyle} animate={{ rotate: 360 }} transition={spinTransition}/>
+            <motion.span style={circleStyle} animate={spinTransition} />
         </div>
-    )
-}
+    );
+};
 
-export default CircleLoader
+export default CircleLoader;

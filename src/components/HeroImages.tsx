@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { motion } from 'framer-motion'
+import { MovieProps } from '../types';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-const HeroImages = ({ movies }) => {
+const HeroImages = ({ movies }: { movies: MovieProps[] }) => {
     const [slidePerView, setSlidePerView] = useState(2);
     const [slidePerGroup, setSlidePerGroup] = useState(2);
 
