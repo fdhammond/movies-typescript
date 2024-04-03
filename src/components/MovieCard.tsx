@@ -15,7 +15,7 @@ export default function MovieCard({
 }: MovieCard) {
   return (
     <div className="md:w-[300px] h-[528px]">
-      <Link to={`/movie/${movieId.toString()}`} params={{ id: movieId.toString() }}>
+      <Link to={`/movie/${movieId.toString()}`} params={{ id: Number(movieId) }}>
         <img src={`https://image.tmdb.org/t/p/original${poster_path}`} alt="" />
       </Link>
       <div className="flex flex-col justify-center items-center self-center mt-4">

@@ -3,7 +3,7 @@ import { IoMdStarOutline } from "react-icons/io";
 
 const Stars = ({ rating }: { rating: number }) => {
     const roundedRating = Math.round(rating);
-    const [stars, setStars] = useState<number>(roundedRating);
+    const [stars, _] = useState<number>(roundedRating);
 
     const amountStars = Array(10).fill(0).map((_, index) => index + 1);
 

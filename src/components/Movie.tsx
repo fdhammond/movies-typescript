@@ -11,9 +11,9 @@ import { MovieProps } from "../types";
 const Movie = ({ movie }: { movie: MovieProps }) => {
     const releaseYear = movie.release_date.split("-")[0];
     const [showModal, setShowModal] = useState(false);
-    const [isLoading, setIsLoading] = useState(true);
+    const [_, setIsLoading] = useState(true);
     const [showBlackScreen, setShowBlackScreen] = useState(true);
-    const [showCircle, setShowCircle] = useState(true);
+    const [__, setShowCircle] = useState(true);
 
     useEffect(() => {
         // Simulating data loading delay
