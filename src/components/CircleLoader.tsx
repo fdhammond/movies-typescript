@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, Variant } from "framer-motion";
 
-const CircleLoader: React.FC = () => {
+const CircleLoader = () => {
     const containerStyle: React.CSSProperties = {
         position: "relative",
         width: "6rem",
